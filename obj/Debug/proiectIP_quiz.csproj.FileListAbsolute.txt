@@ -1,6 +1,5 @@
-C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\bin\Debug\proiectIP_quiz.exe.config
 C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\bin\Debug\proiectIP_quiz.exe
-C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\bin\Debug\proiectIP_quiz.pdb
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\bin\Debug\proiectIP_quiz.exe.config
 C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.csproj.AssemblyReference.cache
 C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.FormQuiz.resources
 C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.FormStartScreen.resources
@@ -9,3 +8,9 @@ C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.csproj.Ge
 C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.csproj.CoreCompileInputs.cache
 C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.exe
 C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.pdb
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.exe.config
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\bin\Debug\proiectIP_quiz.pdb
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectI.B11CBE46.Up2Date
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.FormFinish.resources

@@ -29,7 +29,7 @@ namespace proiectIP_quiz
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            string category = comboBoxCategory.SelectedItem.ToString();
+            string category = comboBoxCategory.SelectedItem.ToString().ToLower();
             bool isTimed = checkBoxTimed.Checked;
 
             FormQuiz formQuiz = new FormQuiz(category, isTimed);

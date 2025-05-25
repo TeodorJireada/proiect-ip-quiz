@@ -41,16 +41,16 @@
             // labelStartScreenTitle
             // 
             this.labelStartScreenTitle.AutoSize = true;
-            this.labelStartScreenTitle.Font = new System.Drawing.Font("Noto Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStartScreenTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStartScreenTitle.Location = new System.Drawing.Point(443, 54);
             this.labelStartScreenTitle.Name = "labelStartScreenTitle";
-            this.labelStartScreenTitle.Size = new System.Drawing.Size(305, 73);
+            this.labelStartScreenTitle.Size = new System.Drawing.Size(301, 55);
             this.labelStartScreenTitle.TabIndex = 0;
             this.labelStartScreenTitle.Text = "QUIZ GAME";
             // 
             // buttonStart
             // 
-            this.buttonStart.Font = new System.Drawing.Font("Noto Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStart.Location = new System.Drawing.Point(504, 625);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(182, 54);
@@ -62,10 +62,10 @@
             // labelStartScreenDesc
             // 
             this.labelStartScreenDesc.AutoSize = true;
-            this.labelStartScreenDesc.Font = new System.Drawing.Font("Noto Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStartScreenDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStartScreenDesc.Location = new System.Drawing.Point(478, 149);
             this.labelStartScreenDesc.Name = "labelStartScreenDesc";
-            this.labelStartScreenDesc.Size = new System.Drawing.Size(235, 30);
+            this.labelStartScreenDesc.Size = new System.Drawing.Size(225, 25);
             this.labelStartScreenDesc.TabIndex = 2;
             this.labelStartScreenDesc.Text = "Testează-ți cunoștințele!";
             this.labelStartScreenDesc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,20 +73,20 @@
             // labelStartScreenSelect
             // 
             this.labelStartScreenSelect.AutoSize = true;
-            this.labelStartScreenSelect.Font = new System.Drawing.Font("Noto Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStartScreenSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStartScreenSelect.Location = new System.Drawing.Point(478, 328);
             this.labelStartScreenSelect.Name = "labelStartScreenSelect";
-            this.labelStartScreenSelect.Size = new System.Drawing.Size(108, 30);
+            this.labelStartScreenSelect.Size = new System.Drawing.Size(103, 25);
             this.labelStartScreenSelect.TabIndex = 3;
             this.labelStartScreenSelect.Text = "Categorie:";
             // 
             // checkBoxTimed
             // 
             this.checkBoxTimed.AutoSize = true;
-            this.checkBoxTimed.Font = new System.Drawing.Font("Noto Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxTimed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxTimed.Location = new System.Drawing.Point(495, 467);
             this.checkBoxTimed.Name = "checkBoxTimed";
-            this.checkBoxTimed.Size = new System.Drawing.Size(201, 34);
+            this.checkBoxTimed.Size = new System.Drawing.Size(192, 29);
             this.checkBoxTimed.TabIndex = 4;
             this.checkBoxTimed.Text = "Joacă contra timp";
             this.checkBoxTimed.UseVisualStyleBackColor = true;
@@ -95,9 +95,9 @@
             // 
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Items.AddRange(new object[] {
-            "Matematică",
+            "Matematica",
             "Programare",
-            "Literatură",
+            "Literatura",
             "Istorie"});
             this.comboBoxCategory.Location = new System.Drawing.Point(592, 331);
             this.comboBoxCategory.Name = "comboBoxCategory";

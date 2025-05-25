@@ -1,0 +1,35 @@
+{
+  "matematica": [
+    {
+      "QuestionText": "Intrebare 1 mate?",
+      "Options": [ "r1", "r2", "r3", "r4" ],
+      "AnswerIndex": 0
+    },
+    {
+      "QuestionText": "Intrebare 2 mate?",
+      "Options": [ "r1", "r2", "r3", "r4" ],
+      "AnswerIndex": 1
+    }
+  ],
+  "programare": [
+    {
+      "QuestionText": "Intrebare 1 programare?",
+      "Options": [ "r1", "r2", "r3", "r4" ],
+      "AnswerIndex": 2
+    }
+  ],
+  "literatura": [
+    {
+      "QuestionText": "Intrebare 1 literatura?",
+      "Options": [ "r1", "r2", "r3", "r4" ],
+      "AnswerIndex": 3
+    }
+  ],
+  "istorie": [
+    {
+      "QuestionText": "Intrebare 1 istorie?",
+      "Options": [ "r1", "r2", "r3", "r4" ],
+      "AnswerIndex": 1
+    }
+  ]
+}
