@@ -19,6 +19,9 @@ namespace proiectIP_quiz
         private string _category;
         private int _score = 0;
 
+        private Timer _questionTimer;
+        private int _timeLeft = 120;
+
         public FormQuiz(string category, bool isTimed)
         {
             InitializeComponent();
@@ -28,13 +31,25 @@ namespace proiectIP_quiz
             QuestionLoader ql = new QuestionLoader(_category);
             _questions = ql.Questions;
 
+            // Ascundem timerul la început
+            label1.Visible = false;
+
+            if (_isTimed)
+            {
+                _questionTimer = new Timer();
+                _questionTimer.Interval = 1000; // 1 secunda
+                _questionTimer.Tick += QuestionTimer_Tick;
+                label1.Visible = true;
+                _timeLeft = 10;
+                label1.Text = $"Timp ramas: {_timeLeft} sec.";
+                _questionTimer.Start();
+            }
+
             LoadQuestion(_currentQuestionIndex);
         }
 
         private void LoadQuestion(int index)
         {
-            //if (index < 0 || index >= _questions.Count) return;
-
             var q = _questions[index];
 
             labelQuestionText.Text = q.QuestionText;
@@ -42,29 +57,62 @@ namespace proiectIP_quiz
             buttonAnswer2.Text = q.Options[1];
             buttonAnswer3.Text = q.Options[2];
             buttonAnswer4.Text = q.Options[3];
+
+           
+        }
+
+        private void QuestionTimer_Tick(object sender, EventArgs e)
+        {
+            _timeLeft--;
+
+            if (_timeLeft <= 0)
+            {
+                _questionTimer.Stop();
+                ShowFinishFormTimeout();
+            }
+            else
+            {
+                label1.Text = $"Timp rămas: {_timeLeft} sec.";
+            }
         }
 
         private void CheckAnswer(int selectedIndex)
         {
+           
+
             var correctIndex = _questions[_currentQuestionIndex].AnswerIndex;
 
-            if(selectedIndex == correctIndex)
+            if (selectedIndex == correctIndex)
             {
                 _score++;
             }
 
+            NextQuestion();
+        }
+
+        private void NextQuestion()
+        {
             _currentQuestionIndex++;
 
-            if(_currentQuestionIndex < _questions.Count)
+            if (_currentQuestionIndex < _questions.Count)
             {
                 LoadQuestion(_currentQuestionIndex);
             }
             else
             {
-                FormFinish formFinish = new FormFinish(_score);
+                
+                _questionTimer.Stop();
+                FormFinish formFinish = new FormFinish(_score, false);
                 formFinish.Show();
                 this.Hide();
             }
+        }
+
+        private void ShowFinishFormTimeout()
+        {
+            FormFinish formFinish = new FormFinish(_score, true); // trecem true pentru timeout
+            formFinish.Show();
+            this.Hide();
         }
 
         private void buttonAnswer1_Click(object sender, EventArgs e)
@@ -85,6 +133,11 @@ namespace proiectIP_quiz
         private void buttonAnswer4_Click(object sender, EventArgs e)
         {
             CheckAnswer(3);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

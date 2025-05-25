@@ -12,11 +12,19 @@ namespace proiectIP_quiz
 {
     public partial class FormFinish : Form
     {
-        public FormFinish(int score)
+        public FormFinish(int score, bool timeout)
         {
             InitializeComponent();
 
-            labelFinalScore.Text = score.ToString();
+            if (timeout)
+            {
+                labelFinalScore.Text = "Nu ai răspuns la timp la întrebări";
+            }
+            else
+            {
+                labelFinalScore.Text = $"Felicitări! Scorul tău este: {score}";
+            }
+            
         }
 
         private void buttonPlayagain_Click(object sender, EventArgs e)
@@ -29,6 +37,11 @@ namespace proiectIP_quiz
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void labelFinalScore_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
