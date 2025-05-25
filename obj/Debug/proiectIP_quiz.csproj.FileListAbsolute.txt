@@ -1,0 +1,11 @@
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\bin\Debug\proiectIP_quiz.exe.config
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\bin\Debug\proiectIP_quiz.exe
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\bin\Debug\proiectIP_quiz.pdb
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.csproj.AssemblyReference.cache
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.FormQuiz.resources
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.FormStartScreen.resources
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.Properties.Resources.resources
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.csproj.GenerateResource.cache
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.csproj.CoreCompileInputs.cache
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.exe
+C:\Users\Teo\Documents\Scoala\proiect-ip-quiz\obj\Debug\proiectIP_quiz.pdb
