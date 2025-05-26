@@ -15,6 +15,7 @@ namespace proiectIP_quiz
         public FormStartScreen()
         {
             InitializeComponent();
+            comboBoxCategory.SelectedIndex = 0;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -31,21 +32,12 @@ namespace proiectIP_quiz
         {
             string category = comboBoxCategory.SelectedItem.ToString().ToLower();
             bool isTimed = checkBoxTimed.Checked;
-
-            IQuestionLoader questionLoader;
-
-            if (string.IsNullOrEmpty(category))
-            {
-                questionLoader = new NullQuestionLoader();
-            }
-            else
-            {
-                questionLoader = new QuestionLoader(category);
-            }
+            QuestionLoader questionLoader = new QuestionLoader(category);
 
             FormQuiz formQuiz = new FormQuiz(questionLoader, isTimed);
+
             formQuiz.Show();
             this.Hide();
-        }
+        } 
     }
 }

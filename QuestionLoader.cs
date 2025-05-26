@@ -10,31 +10,15 @@ using System.Windows.Forms;
 
 namespace proiectIP_quiz
 {
-    public class QuestionLoader : IQuestionLoader
+    public class QuestionLoader
     {
-        private readonly string _category;
 
+        public List<Question> Questions { get; set; }
         public QuestionLoader(string category)
         {
-            _category = category;
-        }
-
-        public List<Question> GetQuestions()
-        {
-            try
-            {
-                string db = File.ReadAllText("intrebari.json");
-                var allQuestionsByCategory = JsonConvert.DeserializeObject<Dictionary<string, List<Question>>>(db);
-
-                if (allQuestionsByCategory.ContainsKey(_category))
-                    return allQuestionsByCategory[_category];
-            }
-            catch (Exception ex)
-            {
-
-            }
-
-            return new List<Question>();
+            string db = File.ReadAllText("intrebari.json");
+            var allQuestionsByCategory = JsonConvert.DeserializeObject<Dictionary<string, List<Question>>>(db);
+            Questions = allQuestionsByCategory[category];
         }
     }
 }

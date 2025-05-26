@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proiectIP_quiz
 {
-    public partial class FormFinish : Form
+    public partial class FormFinishScreen : Form
     {
-        public FormFinish(int score, bool timeout)
+        public FormFinishScreen(int score, bool timeout)
         {
             InitializeComponent();
 
@@ -24,24 +24,18 @@ namespace proiectIP_quiz
             {
                 labelFinalScore.Text = $"Felicitări! Scorul tău este: {score}";
             }
-            
         }
 
         private void buttonPlayagain_Click(object sender, EventArgs e)
         {
             FormStartScreen formStartScreen = new FormStartScreen();
             formStartScreen.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void labelFinalScore_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

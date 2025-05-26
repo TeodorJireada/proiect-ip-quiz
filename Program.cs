@@ -17,6 +17,7 @@ namespace proiectIP_quiz
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormStartScreen());
+            Application.Exit();
         }
     }
 }

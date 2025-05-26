@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|c:\\users\\teo\\documents\\scoala\\proiect-ip-quiz\\formstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|solutionrelative:formstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\formquiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|solutionrelative:formquiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\timedquizstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|solutionrelative:timedquizstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\formfinishscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|solutionrelative:formfinishscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\quiztimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|solutionrelative:quiztimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\untimedquizstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7693795A-EA15-4D7E-8738-FB5E8CEAD862}|proiectIP_quiz.csproj|solutionrelative:untimedquizstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "QuizTimer.cs",
+              "DocumentMoniker": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\QuizTimer.cs",
+              "RelativeDocumentMoniker": "QuizTimer.cs",
+              "ToolTip": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\QuizTimer.cs",
+              "RelativeToolTip": "QuizTimer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:31:56.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:29:40.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UntimedQuizStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\UntimedQuizStrategy.cs",
+              "RelativeDocumentMoniker": "UntimedQuizStrategy.cs",
+              "ToolTip": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\UntimedQuizStrategy.cs",
+              "RelativeToolTip": "UntimedQuizStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:19:29.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TimedQuizStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\TimedQuizStrategy.cs",
+              "RelativeDocumentMoniker": "TimedQuizStrategy.cs",
+              "ToolTip": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\TimedQuizStrategy.cs",
+              "RelativeToolTip": "TimedQuizStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:08:17.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormQuiz.cs",
+              "DocumentMoniker": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\FormQuiz.cs",
+              "RelativeDocumentMoniker": "FormQuiz.cs",
+              "ToolTip": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\FormQuiz.cs",
+              "RelativeToolTip": "FormQuiz.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAD4v1oAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T08:47:57.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormFinishScreen.cs",
+              "DocumentMoniker": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\FormFinishScreen.cs",
+              "RelativeDocumentMoniker": "FormFinishScreen.cs",
+              "ToolTip": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\FormFinishScreen.cs",
+              "RelativeToolTip": "FormFinishScreen.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T12:57:01.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormStartScreen.cs",
+              "DocumentMoniker": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\FormStartScreen.cs",
+              "RelativeDocumentMoniker": "FormStartScreen.cs",
+              "ToolTip": "C:\\Users\\Teo\\Documents\\Scoala\\proiect-ip-quiz\\FormStartScreen.cs",
+              "RelativeToolTip": "FormStartScreen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T08:47:49.866Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

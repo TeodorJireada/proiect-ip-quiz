@@ -1,6 +1,6 @@
 ﻿namespace proiectIP_quiz
 {
-    partial class FormFinish
+    partial class FormFinishScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -64,7 +64,6 @@
             this.labelFinalScore.Size = new System.Drawing.Size(108, 32);
             this.labelFinalScore.TabIndex = 5;
             this.labelFinalScore.Text = "rezultat";
-            this.labelFinalScore.Click += new System.EventHandler(this.labelFinalScore_Click);
             // 
             // FormFinish
             // 

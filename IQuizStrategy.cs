@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace proiectIP_quiz
 {
-    public interface IQuestionLoader
+    public interface IQuizStrategy
     {
-        List<Question> GetQuestions();
+        void InitializeQuiz(FormQuiz Form);
+        void OnQuizStart();
+        void OnQuizEnd();
     }
 }

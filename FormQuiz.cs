@@ -11,39 +11,33 @@ using System.Windows.Forms;
 
 namespace proiectIP_quiz
 {
-    public partial class FormQuiz : Form
+    public partial class FormQuiz : Form, ITimerObserver
     {
         private List<Question> _questions;
         private int _currentQuestionIndex = 0;
-        private bool _isTimed;
         private int _score = 0;
+        
+        private IQuizStrategy _quizStrategy;
 
-        private Timer _questionTimer;
-        private int _timeLeft = 120;
-
-        public FormQuiz(IQuestionLoader questionLoader, bool isTimed)
-        {
+        public FormQuiz(QuestionLoader questionLoader, bool isTimed)
+        { 
             InitializeComponent();
 
-            
-            _isTimed = isTimed;
-            _questions = questionLoader.GetQuestions();
+            _questions = questionLoader.Questions;
 
-            // Ascundem timerul la început
-            label1.Visible = false;
-
-            if (_isTimed)
+            if (isTimed)
             {
-                _questionTimer = new Timer();
-                _questionTimer.Interval = 1000; // 1 secunda
-                _questionTimer.Tick += QuestionTimer_Tick;
-                label1.Visible = true;
-                _timeLeft = 10;
-                label1.Text = $"Timp ramas: {_timeLeft} sec.";
-                _questionTimer.Start();
+                _quizStrategy = new TimedQuizStrategy();
+            }
+            else
+            {
+                _quizStrategy = new UntimedQuizStrategy();
             }
 
+            _quizStrategy.InitializeQuiz(this);
+
             LoadQuestion(_currentQuestionIndex);
+            _quizStrategy.OnQuizStart();
         }
 
         private void LoadQuestion(int index)
@@ -54,30 +48,40 @@ namespace proiectIP_quiz
             buttonAnswer1.Text = q.Options[0];
             buttonAnswer2.Text = q.Options[1];
             buttonAnswer3.Text = q.Options[2];
-            buttonAnswer4.Text = q.Options[3];
-
-           
+            buttonAnswer4.Text = q.Options[3];   
         }
 
-        private void QuestionTimer_Tick(object sender, EventArgs e)
+        public void ShowTimer(bool isTimed)
         {
-            _timeLeft--;
-
-            if (_timeLeft <= 0)
+            if (isTimed)
             {
-                _questionTimer.Stop();
-                ShowFinishFormTimeout();
+                labelTimer.Show();
             }
             else
             {
-                label1.Text = $"Timp rămas: {_timeLeft} sec.";
+                labelTimer.Hide();
             }
         }
 
-        private void CheckAnswer(int selectedIndex)
+        public void OnTimeUpdated(int timeLeft)
         {
-           
+            labelTimer.Text = $"{timeLeft}";
+        }
 
+        public void OnTimeExpired()
+        {
+            _quizStrategy.OnQuizEnd();
+            ShowFinishForm(true);
+        }
+        public void ShowFinishForm(bool isTimeout)
+        {
+            FormFinishScreen formFinish = new FormFinishScreen(_score, isTimeout);
+            formFinish.Show();
+            this.Close();
+        }
+
+        private void CheckAnswer(int selectedIndex)
+        { 
             var correctIndex = _questions[_currentQuestionIndex].AnswerIndex;
 
             if (selectedIndex == correctIndex)
@@ -85,37 +89,19 @@ namespace proiectIP_quiz
                 _score++;
             }
 
-            NextQuestion();
-        }
-
-        private void NextQuestion()
-        {
             _currentQuestionIndex++;
 
-            if (_currentQuestionIndex < _questions.Count)
+            if(_currentQuestionIndex < _questions.Count)
             {
                 LoadQuestion(_currentQuestionIndex);
             }
             else
             {
-
-                if (_isTimed && _questionTimer != null)
-                {
-                    _questionTimer.Stop();
-                }
-
-                FormFinish formFinish = new FormFinish(_score, false);
-                formFinish.Show();
-                this.Hide();
+                _quizStrategy.OnQuizEnd();
+                ShowFinishForm(false);
             }
         }
-
-        private void ShowFinishFormTimeout()
-        {
-            FormFinish formFinish = new FormFinish(_score, true); // trecem true pentru timeout
-            formFinish.Show();
-            this.Hide();
-        }
+       
 
         private void buttonAnswer1_Click(object sender, EventArgs e)
         {
@@ -135,11 +121,6 @@ namespace proiectIP_quiz
         private void buttonAnswer4_Click(object sender, EventArgs e)
         {
             CheckAnswer(3);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
