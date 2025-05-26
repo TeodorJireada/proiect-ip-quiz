@@ -32,7 +32,18 @@ namespace proiectIP_quiz
             string category = comboBoxCategory.SelectedItem.ToString().ToLower();
             bool isTimed = checkBoxTimed.Checked;
 
-            FormQuiz formQuiz = new FormQuiz(category, isTimed);
+            IQuestionLoader questionLoader;
+
+            if (string.IsNullOrEmpty(category))
+            {
+                questionLoader = new NullQuestionLoader();
+            }
+            else
+            {
+                questionLoader = new QuestionLoader(category);
+            }
+
+            FormQuiz formQuiz = new FormQuiz(questionLoader, isTimed);
             formQuiz.Show();
             this.Hide();
         }

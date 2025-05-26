@@ -16,20 +16,18 @@ namespace proiectIP_quiz
         private List<Question> _questions;
         private int _currentQuestionIndex = 0;
         private bool _isTimed;
-        private string _category;
         private int _score = 0;
 
         private Timer _questionTimer;
         private int _timeLeft = 120;
 
-        public FormQuiz(string category, bool isTimed)
+        public FormQuiz(IQuestionLoader questionLoader, bool isTimed)
         {
             InitializeComponent();
 
-            _category = category;
+            
             _isTimed = isTimed;
-            QuestionLoader ql = new QuestionLoader(_category);
-            _questions = ql.Questions;
+            _questions = questionLoader.GetQuestions();
 
             // Ascundem timerul la început
             label1.Visible = false;
@@ -100,8 +98,12 @@ namespace proiectIP_quiz
             }
             else
             {
-                
-                _questionTimer.Stop();
+
+                if (_isTimed && _questionTimer != null)
+                {
+                    _questionTimer.Stop();
+                }
+
                 FormFinish formFinish = new FormFinish(_score, false);
                 formFinish.Show();
                 this.Hide();
