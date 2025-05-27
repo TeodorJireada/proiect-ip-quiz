@@ -30,7 +30,7 @@ namespace proiectIP_quiz
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            string category = comboBoxCategory.SelectedItem.ToString().ToLower();
+            string category = comboBoxCategory.SelectedItem.ToString();
             bool isTimed = checkBoxTimed.Checked;
             QuestionLoader questionLoader = new QuestionLoader(category);
 
