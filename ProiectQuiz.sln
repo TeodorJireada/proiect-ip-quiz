@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proiectIP_quiz", "proiectIP_quiz.csproj", "{7693795A-EA15-4D7E-8738-FB5E8CEAD862}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProiectQuiz", "ProiectQuiz.csproj", "{7693795A-EA15-4D7E-8738-FB5E8CEAD862}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

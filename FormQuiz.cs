@@ -1,22 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
-namespace proiectIP_quiz
+namespace ProiectQuiz
 {
     public partial class FormQuiz : Form, ITimerObserver
     {
         private List<Question> _questions;
         private int _currentQuestionIndex = 0;
         private int _score = 0;
-        
+        private Label[] _progressBar;
+        private List<bool> _progressHistory = new List<bool>();
+
         private IQuizStrategy _quizStrategy;
 
         public FormQuiz(QuestionLoader questionLoader, bool isTimed)
@@ -38,13 +34,28 @@ namespace proiectIP_quiz
 
             LoadQuestion(_currentQuestionIndex);
             _quizStrategy.OnQuizStart();
+
+            _progressBar = new Label[]
+            {
+                labelProgressBar1, labelProgressBar2, labelProgressBar3, labelProgressBar4, labelProgressBar5,
+                labelProgressBar6, labelProgressBar7, labelProgressBar8, labelProgressBar9, labelProgressBar10
+            };
+            _progressBar[_currentQuestionIndex].ForeColor = Color.Black;
         }
 
+        private void UpdateProgressBar()
+        {
+            for(int i = 0; i<_progressHistory.Count; i++)
+            {
+                _progressBar[i].ForeColor = _progressHistory[i] ? Color.Green : Color.Red;
+            }
+            _progressBar[_currentQuestionIndex].ForeColor = Color.Black;
+        }
         private void LoadQuestion(int index)
         {
             var q = _questions[index];
 
-            labelQuestionText.Text = q.QuestionText;
+            labelQuestionText.Text = $"{_currentQuestionIndex+1}. {q.QuestionText}";
             buttonAnswer1.Text = q.Options[0];
             buttonAnswer2.Text = q.Options[1];
             buttonAnswer3.Text = q.Options[2];
@@ -65,7 +76,11 @@ namespace proiectIP_quiz
 
         public void OnTimeUpdated(int timeLeft)
         {
-            labelTimer.Text = $"{timeLeft}";
+            labelTimer.Text = $"Timp rămas: {timeLeft}";
+            if (timeLeft < 10)
+            {
+                labelTimer.ForeColor = Color.Red;
+            } 
         }
 
         public void OnTimeExpired()
@@ -87,6 +102,11 @@ namespace proiectIP_quiz
             if (selectedIndex == correctIndex)
             {
                 _score++;
+                _progressHistory.Add(true);
+            }
+            else
+            {   
+                _progressHistory.Add(false);
             }
 
             _currentQuestionIndex++;
@@ -94,6 +114,7 @@ namespace proiectIP_quiz
             if(_currentQuestionIndex < _questions.Count)
             {
                 LoadQuestion(_currentQuestionIndex);
+                UpdateProgressBar();
             }
             else
             {
@@ -121,6 +142,16 @@ namespace proiectIP_quiz
         private void buttonAnswer4_Click(object sender, EventArgs e)
         {
             CheckAnswer(3);
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            //TODO help
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

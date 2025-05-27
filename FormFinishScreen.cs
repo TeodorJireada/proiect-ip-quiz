@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proiectIP_quiz
+namespace ProiectQuiz
 {
     public partial class FormFinishScreen : Form
     {
@@ -18,24 +13,41 @@ namespace proiectIP_quiz
 
             if (timeout)
             {
-                labelFinalScore.Text = "Nu ai răspuns la timp la întrebări";
+                labelFinalScore.Text = $"Timpul s-a scurs!\n Scor: {score}/10";
             }
             else
             {
-                labelFinalScore.Text = $"Felicitări! Scorul tău este: {score}";
+                if(score < 5)
+                {
+                    labelFinalScore.Text = $"Oof... Poți mai mult!\n Scor: {score}/10";
+                }
+                else if(score < 8)
+                { 
+                    labelFinalScore.Text = $"Bine! Te descurci!\nScor: {score}";
+                }
+                else if(score < 10)
+                {
+                    labelFinalScore.Text = $"Felicitări!\nScor: {score}";
+                }
+                else
+                {
+                    labelFinalScore.Text = $"UAU! Ești cel mai bun!\nScor: {score}";
+                }
             }
         }
 
-        private void buttonPlayagain_Click(object sender, EventArgs e)
-        {
-            FormStartScreen formStartScreen = new FormStartScreen();
-            formStartScreen.Show();
-            this.Close();
-        }
+        
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonPlayAgain_Click(object sender, EventArgs e)
+        {
+            FormStartScreen formStartScreen = new FormStartScreen();
+            formStartScreen.Show();
+            this.Close();
         }
     }
 }

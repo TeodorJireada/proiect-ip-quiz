@@ -1,4 +1,4 @@
-﻿namespace proiectIP_quiz
+﻿namespace ProiectQuiz
 {
     partial class FormFinishScreen
     {
@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonPlayagain = new System.Windows.Forms.Button();
+            this.buttonPlayAgain = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.labelFinalScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // buttonPlayagain
+            // buttonPlayAgain
             // 
-            this.buttonPlayagain.Location = new System.Drawing.Point(429, 344);
-            this.buttonPlayagain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonPlayagain.Name = "buttonPlayagain";
-            this.buttonPlayagain.Size = new System.Drawing.Size(161, 53);
-            this.buttonPlayagain.TabIndex = 3;
-            this.buttonPlayagain.Text = "Joacă din nou";
-            this.buttonPlayagain.UseVisualStyleBackColor = true;
-            this.buttonPlayagain.Click += new System.EventHandler(this.buttonPlayagain_Click);
+            this.buttonPlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPlayAgain.Location = new System.Drawing.Point(452, 477);
+            this.buttonPlayAgain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPlayAgain.Name = "buttonPlayAgain";
+            this.buttonPlayAgain.Size = new System.Drawing.Size(275, 85);
+            this.buttonPlayAgain.TabIndex = 3;
+            this.buttonPlayAgain.Text = "Joacă din nou";
+            this.buttonPlayAgain.UseVisualStyleBackColor = true;
+            this.buttonPlayAgain.Click += new System.EventHandler(this.buttonPlayAgain_Click);
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(429, 466);
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Location = new System.Drawing.Point(529, 638);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(161, 57);
+            this.buttonExit.Size = new System.Drawing.Size(120, 50);
             this.buttonExit.TabIndex = 4;
             this.buttonExit.Text = "Ieșire";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -57,32 +59,32 @@
             // 
             // labelFinalScore
             // 
-            this.labelFinalScore.AutoSize = true;
-            this.labelFinalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFinalScore.Location = new System.Drawing.Point(336, 221);
+            this.labelFinalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFinalScore.Location = new System.Drawing.Point(158, 162);
             this.labelFinalScore.Name = "labelFinalScore";
-            this.labelFinalScore.Size = new System.Drawing.Size(108, 32);
+            this.labelFinalScore.Size = new System.Drawing.Size(863, 213);
             this.labelFinalScore.TabIndex = 5;
             this.labelFinalScore.Text = "rezultat";
+            this.labelFinalScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FormFinish
+            // FormFinishScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 675);
+            this.ClientSize = new System.Drawing.Size(1178, 844);
             this.Controls.Add(this.labelFinalScore);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonPlayagain);
+            this.Controls.Add(this.buttonPlayAgain);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormFinish";
-            this.Text = "FormFinish";
+            this.Name = "FormFinishScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quiz Game";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonPlayagain;
+        private System.Windows.Forms.Button buttonPlayAgain;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label labelFinalScore;
     }

@@ -1,4 +1,4 @@
-﻿namespace proiectIP_quiz
+﻿namespace ProiectQuiz
 {
     partial class FormStartScreen
     {
@@ -41,21 +41,21 @@
             // labelStartScreenTitle
             // 
             this.labelStartScreenTitle.AutoSize = true;
-            this.labelStartScreenTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStartScreenTitle.Location = new System.Drawing.Point(443, 54);
+            this.labelStartScreenTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStartScreenTitle.Location = new System.Drawing.Point(366, 162);
             this.labelStartScreenTitle.Name = "labelStartScreenTitle";
-            this.labelStartScreenTitle.Size = new System.Drawing.Size(301, 55);
+            this.labelStartScreenTitle.Size = new System.Drawing.Size(447, 82);
             this.labelStartScreenTitle.TabIndex = 0;
             this.labelStartScreenTitle.Text = "QUIZ GAME";
             // 
             // buttonStart
             // 
-            this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStart.Location = new System.Drawing.Point(504, 625);
+            this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStart.Location = new System.Drawing.Point(488, 580);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(182, 54);
+            this.buttonStart.Size = new System.Drawing.Size(203, 79);
             this.buttonStart.TabIndex = 1;
-            this.buttonStart.Text = "Start";
+            this.buttonStart.Text = "START";
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
@@ -63,7 +63,7 @@
             // 
             this.labelStartScreenDesc.AutoSize = true;
             this.labelStartScreenDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStartScreenDesc.Location = new System.Drawing.Point(478, 149);
+            this.labelStartScreenDesc.Location = new System.Drawing.Point(477, 268);
             this.labelStartScreenDesc.Name = "labelStartScreenDesc";
             this.labelStartScreenDesc.Size = new System.Drawing.Size(225, 25);
             this.labelStartScreenDesc.TabIndex = 2;
@@ -73,42 +73,44 @@
             // labelStartScreenSelect
             // 
             this.labelStartScreenSelect.AutoSize = true;
-            this.labelStartScreenSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStartScreenSelect.Location = new System.Drawing.Point(478, 328);
+            this.labelStartScreenSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStartScreenSelect.Location = new System.Drawing.Point(422, 383);
             this.labelStartScreenSelect.Name = "labelStartScreenSelect";
-            this.labelStartScreenSelect.Size = new System.Drawing.Size(103, 25);
+            this.labelStartScreenSelect.Size = new System.Drawing.Size(164, 37);
             this.labelStartScreenSelect.TabIndex = 3;
             this.labelStartScreenSelect.Text = "Categorie:";
             // 
             // checkBoxTimed
             // 
             this.checkBoxTimed.AutoSize = true;
-            this.checkBoxTimed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxTimed.Location = new System.Drawing.Point(495, 467);
+            this.checkBoxTimed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxTimed.Location = new System.Drawing.Point(440, 473);
             this.checkBoxTimed.Name = "checkBoxTimed";
-            this.checkBoxTimed.Size = new System.Drawing.Size(192, 29);
+            this.checkBoxTimed.Size = new System.Drawing.Size(298, 41);
             this.checkBoxTimed.TabIndex = 4;
             this.checkBoxTimed.Text = "Joacă contra timp";
             this.checkBoxTimed.UseVisualStyleBackColor = true;
             // 
             // comboBoxCategory
             // 
+            this.comboBoxCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Items.AddRange(new object[] {
             "Matematica",
             "Programare",
             "Literatura",
             "Istorie"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(592, 331);
+            this.comboBoxCategory.Location = new System.Drawing.Point(592, 383);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxCategory.Size = new System.Drawing.Size(164, 37);
             this.comboBoxCategory.TabIndex = 5;
             // 
             // buttonHelp
             // 
-            this.buttonHelp.Location = new System.Drawing.Point(52, 768);
+            this.buttonHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHelp.Location = new System.Drawing.Point(47, 770);
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(173, 47);
+            this.buttonHelp.Size = new System.Drawing.Size(120, 50);
             this.buttonHelp.TabIndex = 6;
             this.buttonHelp.Text = "Ajutor";
             this.buttonHelp.UseVisualStyleBackColor = true;
@@ -116,9 +118,10 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(945, 768);
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Location = new System.Drawing.Point(1011, 770);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(203, 47);
+            this.buttonExit.Size = new System.Drawing.Size(120, 50);
             this.buttonExit.TabIndex = 7;
             this.buttonExit.Text = "Ieșire";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -138,6 +141,7 @@
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.labelStartScreenTitle);
             this.Name = "FormStartScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quiz Game";
             this.ResumeLayout(false);
             this.PerformLayout();

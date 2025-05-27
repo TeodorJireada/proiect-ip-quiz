@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace proiectIP_quiz
+﻿namespace ProiectQuiz
 {
     public class TimedQuizStrategy : IQuizStrategy
     {
         private QuizTimer _timer;
-        private int _quizTime = 10;
+        private int _quizTime = 30;
 
         public void InitializeQuiz(FormQuiz form)
         {

@@ -69,10 +69,10 @@
     </Compile>
     <Compile Include="IQuizStrategy.cs" />
     <Compile Include="ITimerObserver.cs" />
-    <Compile Include="QuestionLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Question.cs" />
+    <Compile Include="QuestionLoader.cs" />
     <Compile Include="QuizTimer.cs" />
     <Compile Include="TimedQuizStrategy.cs" />
     <Compile Include="UntimedQuizStrategy.cs" />

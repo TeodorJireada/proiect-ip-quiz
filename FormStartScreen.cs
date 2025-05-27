@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proiectIP_quiz
+namespace ProiectQuiz
 {
     public partial class FormStartScreen: Form
     {
@@ -30,14 +24,20 @@ namespace proiectIP_quiz
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            string category = comboBoxCategory.SelectedItem.ToString();
-            bool isTimed = checkBoxTimed.Checked;
-            QuestionLoader questionLoader = new QuestionLoader(category);
+            try
+            {
+                string category = comboBoxCategory.SelectedItem.ToString();
+                bool isTimed = checkBoxTimed.Checked;
+                QuestionLoader questionLoader = new QuestionLoader(category);
 
-            FormQuiz formQuiz = new FormQuiz(questionLoader, isTimed);
+                FormQuiz formQuiz = new FormQuiz(questionLoader, isTimed);
+                formQuiz.Show();
+                this.Hide();
 
-            formQuiz.Show();
-            this.Hide();
+            } catch (Exception ex) {
+                MessageBox.Show("Opțiune invalidă! Alege o opțiune din cele existente!");
+                comboBoxCategory.SelectedIndex = 0;
+            }
         } 
     }
 }
