@@ -19,7 +19,7 @@ namespace ProiectQuiz
 
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Despre aplicație");
+            Help.ShowHelp(this, "Proiect.chm");
         }
 
         private void buttonStart_Click(object sender, EventArgs e)

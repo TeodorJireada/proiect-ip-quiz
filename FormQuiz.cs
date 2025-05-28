@@ -153,5 +153,7 @@ namespace ProiectQuiz
         {
             Application.Exit();
         }
+
+       
     }
 }

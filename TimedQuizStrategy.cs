@@ -3,7 +3,7 @@
     public class TimedQuizStrategy : IQuizStrategy
     {
         private QuizTimer _timer;
-        private int _quizTime = 30;
+        private int _quizTime = 10;
 
         public void InitializeQuiz(FormQuiz form)
         {
