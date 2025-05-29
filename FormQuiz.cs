@@ -208,7 +208,7 @@ namespace ProiectQuiz
         /// </summary>
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-            //TODO help
+            Help.ShowHelp(this, "Proiect.chm");
         }
 
         /// <summary>
