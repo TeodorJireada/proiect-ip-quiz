@@ -17,14 +17,29 @@
 
 namespace ProiectQuiz
 {
+    /// <summary>
+    /// Implements the strategy for a quiz session without a timer.
+    /// Keeps the quiz focused on content rather than speed.
+    /// </summary>
     public class UntimedQuizStrategy : IQuizStrategy
     {
+        /// <summary>
+        /// Hides the timer since timing is not relevant for this mode.
+        /// </summary>
+        /// <param name="form"> The quiz form to update UI accordingly.</param>
         public void InitializeQuiz(FormQuiz form)
         {
             form.ShowTimer(false);
         }
 
+        /// <summary>
+        /// No special setup needed at the start of an untimed quiz.
+        /// </summary>
         public void OnQuizStart() { }
+
+        /// <summary>
+        /// No cleanup needed when ending an untimed quiz.
+        /// </summary>
         public void OnQuizEnd() { }
     }
 }

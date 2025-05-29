@@ -24,6 +24,9 @@ using System.Drawing;
 
 namespace ProiectQuiz
 {
+    /// <summary>
+    /// The main form that runs the quiz.
+    /// </summary>
     public partial class FormQuiz : Form, ITimerObserver
     {
         private List<Question> _questions;
@@ -34,6 +37,9 @@ namespace ProiectQuiz
 
         private IQuizStrategy _quizStrategy;
 
+        /// <summary>
+        /// Initializes the quiz form with questions and quiz strategy.
+        /// </summary>
         public FormQuiz(QuestionLoader questionLoader, bool isTimed)
         { 
             InitializeComponent();
@@ -62,6 +68,9 @@ namespace ProiectQuiz
             _progressBar[_currentQuestionIndex].ForeColor = Color.Black;
         }
 
+        /// <summary>
+        /// Updates the progress bar colors based on the user's answers.
+        /// </summary>
         private void UpdateProgressBar()
         {
             for(int i = 0; i<_progressHistory.Count; i++)
@@ -70,6 +79,10 @@ namespace ProiectQuiz
             }
             _progressBar[_currentQuestionIndex].ForeColor = Color.Black;
         }
+
+        /// <summary>
+        /// Loads the current question and polulates the UI with options.
+        /// </summary>
         private void LoadQuestion(int index)
         {
             var q = _questions[index];
@@ -81,6 +94,9 @@ namespace ProiectQuiz
             buttonAnswer4.Text = q.Options[3];   
         }
 
+        /// <summary>
+        /// Controls whether the timer label is displayed based on the quiz type.
+        /// </summary>
         public void ShowTimer(bool isTimed)
         {
             if (isTimed)
@@ -93,6 +109,9 @@ namespace ProiectQuiz
             }
         }
 
+        /// <summary>
+        /// Updates the countdown timer display and changes color if time is low.
+        /// </summary>
         public void OnTimeUpdated(int timeLeft)
         {
             labelTimer.Text = $"Timp rămas: {timeLeft}";
@@ -102,11 +121,18 @@ namespace ProiectQuiz
             } 
         }
 
+        /// <summary>
+        /// Handles the event when time has expired.
+        /// </summary>
         public void OnTimeExpired()
         {
             _quizStrategy.OnQuizEnd();
             ShowFinishForm(true);
         }
+
+        /// <summary>
+        /// Displays the finish screen with final results.
+        /// </summary>
         public void ShowFinishForm(bool isTimeout)
         {
             FormFinishScreen formFinish = new FormFinishScreen(_score, isTimeout);
@@ -114,6 +140,9 @@ namespace ProiectQuiz
             this.Close();
         }
 
+        /// <summary>
+        /// Evaluates the user's answer and updates progress.
+        /// </summary>
         private void CheckAnswer(int selectedIndex)
         { 
             var correctIndex = _questions[_currentQuestionIndex].AnswerIndex;
@@ -141,33 +170,50 @@ namespace ProiectQuiz
                 ShowFinishForm(false);
             }
         }
-       
 
+        /// <summary>
+        /// Answer button 1 click event handler.
+        /// </summary>
         private void buttonAnswer1_Click(object sender, EventArgs e)
         {
             CheckAnswer(0);
         }
 
+        /// <summary>
+        /// Answer button 2 click event handler.
+        /// </summary>
         private void buttonAnswer2_Click(object sender, EventArgs e)
         {
             CheckAnswer(1);
         }
 
+        /// <summary>
+        /// Answer button 3 click event handler.
+        /// </summary>
         private void buttonAnswer3_Click(object sender, EventArgs e)
         {
             CheckAnswer(2);
         }
 
+        /// <summary>
+        /// Answer button 4 click event handler.
+        /// </summary>
         private void buttonAnswer4_Click(object sender, EventArgs e)
         {
             CheckAnswer(3);
         }
 
+        /// <summary>
+        /// Help button click placeholder.
+        /// </summary>
         private void buttonHelp_Click(object sender, EventArgs e)
         {
             //TODO help
         }
 
+        /// <summary>
+        /// Exits the quiz from the active form.
+        /// </summary>
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();

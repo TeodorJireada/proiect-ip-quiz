@@ -22,28 +22,44 @@ namespace ProiectQuiz
 {
     public partial class FormStartScreen: Form
     {
+
+        /// <summary>
+        /// Initializes the start screen form.
+        /// </summary>
         public FormStartScreen()
         {
             InitializeComponent();
+            //Sets a default category to avoid null selection
             comboBoxCategory.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Handles the exit button click event to close the application.
+        /// </summary>
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();    
         }
 
+        /// <summary>
+        /// Displays help information.
+        /// </summary>
         private void buttonHelp_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "Proiect.chm");
         }
 
+
+        /// <summary>
+        /// Starts the quiz using the selected category and timed option.
+        /// </summary>
         private void buttonStart_Click(object sender, EventArgs e)
         {
             try
             {
                 string category = comboBoxCategory.SelectedItem.ToString();
                 bool isTimed = checkBoxTimed.Checked;
+
                 QuestionLoader questionLoader = new QuestionLoader(category);
 
                 FormQuiz formQuiz = new FormQuiz(questionLoader, isTimed);

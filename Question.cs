@@ -19,10 +19,24 @@ using System.Collections.Generic;
 
 namespace ProiectQuiz
 {
+    /// <summary>
+    /// Represents a quiz section, including its text, answer options, and the index of the correct answer.
+    /// </summary>
     public class Question
     {
+        /// <summary>
+        /// The text of the question presented to the user.
+        /// </summary>
         public string QuestionText { get; set; }
+
+        /// <summary>
+        /// A list of possible answer options. Assumes exactly four options.
+        /// </summary>
         public List<string> Options { get; set; }
+
+        /// <summary>
+        /// The index of the correct answer within the Options list.
+        /// </summary>
         public int AnswerIndex { get; set; }
     }
 }

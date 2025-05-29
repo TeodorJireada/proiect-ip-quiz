@@ -22,10 +22,19 @@ using System.Linq;
 
 namespace ProiectQuiz
 {
+    /// <summary>
+    /// Loads and prepares a set of quiz questions from a JSON file based on the selected category.
+    /// </summary>
     public class QuestionLoader
     {
-
+        /// <summary>
+        /// The list of questions prepared for the current quiz session.
+        /// </summary>
         public List<Question> Questions { get; set; }
+
+        /// <summary>
+        /// Loads questions, shuffles them, and selects a fixed number for use.
+        /// </summary>
         public QuestionLoader(string category)
         {
             string db = File.ReadAllText("intrebari.json");

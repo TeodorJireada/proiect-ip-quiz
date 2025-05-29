@@ -18,10 +18,25 @@
 
 namespace ProiectQuiz
 {
+    /// <summary>
+    /// Defines a strategy interface for quiz behavior customization.
+    /// Enables extending quiz logic without modifying the core form.
+    /// </summary>
     public interface IQuizStrategy
     {
+        /// <summary>
+        /// Prepares the quiz form with necessary data and settings.
+        /// </summary>
+        /// <param name="Form">The main quiz form will use this strategy.</param>
         void InitializeQuiz(FormQuiz Form);
+
+        /// <summary>
+        /// Called when the quiz starts; used to trigger time or setup logic.
+        /// </summary>
         void OnQuizStart();
+        /// <summary>
+        /// Called when the quiz ends; used to clean up or finalize logic.
+        /// </summary>
         void OnQuizEnd();
     }
 }

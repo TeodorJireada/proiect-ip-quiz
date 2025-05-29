@@ -18,9 +18,20 @@
 
 namespace ProiectQuiz
 {
+    /// <summary>
+    /// Defines a contract for components that react to timer events in a quiz.
+    /// </summary>
     public interface ITimerObserver
     {
+        /// <summary>
+        /// Called whenever the remaining time is updated.
+        /// </summary>
+        /// <param name="timeLeft">The number of seconds left in the quiz timer.</param>
         void OnTimeUpdated(int timeLeft);
+
+        /// <summary>
+        /// Called when the timer has expired and the quiz should end.
+        /// </summary>
         void OnTimeExpired();
     }
 }

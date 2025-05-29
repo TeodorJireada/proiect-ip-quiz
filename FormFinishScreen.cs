@@ -23,8 +23,16 @@ using System.Windows.Forms;
 
 namespace ProiectQuiz
 {
+    /// <summary>
+    /// Displays the final score and message based on user performance or timeout.
+    /// </summary>
     public partial class FormFinishScreen : Form
     {
+        /// <summary>
+        /// Initializes the finish screen and presents a message based on quiz outcome.
+        /// </summary>
+        /// <param name="score">Final score achieved by the user.</param>
+        /// <param name="timeout">Indicates if the quiz ended due to timeout.</param>
         public FormFinishScreen(int score, bool timeout)
         {
             InitializeComponent();
@@ -54,13 +62,18 @@ namespace ProiectQuiz
             }
         }
 
-        
 
+        /// <summary>
+        /// Handles the exit button click by closing the application.
+        /// </summary>
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Handles the play again button click by restarting from the start screen.
+        /// </summary>
         private void buttonPlayAgain_Click(object sender, EventArgs e)
         {
             FormStartScreen formStartScreen = new FormStartScreen();
