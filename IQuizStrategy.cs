@@ -14,7 +14,7 @@
  *  PURPOSE. See the GNU General Public License for more details.         *
  *                                                                        *
  **************************************************************************/
-
+ 
 
 namespace ProiectQuiz
 {
@@ -27,8 +27,8 @@ namespace ProiectQuiz
         /// <summary>
         /// Prepares the quiz form with necessary data and settings.
         /// </summary>
-        /// <param name="Form">The main quiz form will use this strategy.</param>
-        void InitializeQuiz(FormQuiz Form);
+        /// <param name="form">The main quiz form will use this strategy.</param>
+        void InitializeQuiz(FormQuiz form);
 
         /// <summary>
         /// Called when the quiz starts; used to trigger time or setup logic.

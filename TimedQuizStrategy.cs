@@ -23,7 +23,7 @@ namespace ProiectQuiz
     public class TimedQuizStrategy : IQuizStrategy
     {
         private QuizTimer _timer;
-        private int _quizTime = 10;
+        private int _quizTime = 30;
 
         /// <summary>
         /// Initializes the quiz by attaching a timer and enabling the timer display.

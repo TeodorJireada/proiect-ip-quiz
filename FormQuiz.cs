@@ -56,9 +56,9 @@ namespace ProiectQuiz
             }
 
             _quizStrategy.InitializeQuiz(this);
+            _quizStrategy.OnQuizStart();
 
             LoadQuestion(_currentQuestionIndex);
-            _quizStrategy.OnQuizStart();
 
             _progressBar = new Label[]
             {
@@ -218,7 +218,5 @@ namespace ProiectQuiz
         {
             Application.Exit();
         }
-
-       
     }
 }
